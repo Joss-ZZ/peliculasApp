@@ -10,8 +10,6 @@ import { Pelicula } from '../../interfaces/peliculas.interface';
 })
 export class VerPeliculaComponent implements OnInit {
 
-  url: string = 'https://image.tmdb.org/t/p/w1280/';
-
   pelicula: Pelicula;
 
   constructor(

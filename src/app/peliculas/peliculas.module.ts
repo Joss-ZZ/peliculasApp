@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 import {InputTextModule} from 'primeng/inputtext';
 import { PopularesComponent } from './pages/populares/populares.component';
@@ -37,8 +36,7 @@ import { ImagenesPipe } from './pipes/imagenes.pipe';
     CommonModule, 
     InputTextModule,
     FormsModule,
-    RouterModule,
-    MatProgressSpinnerModule
+    RouterModule
   ]
 })
 export class PeliculasModule { }

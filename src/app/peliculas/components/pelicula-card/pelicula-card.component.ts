@@ -8,8 +8,6 @@ import { Pelicula } from '../../interfaces/peliculas.interface';
 })
 export class PeliculaCardComponent implements OnInit {
 
-  imageURL: string = 'https://image.tmdb.org/t/p/w300/';
-
   @Input() termino: string = '';
   @Input() peliculas: Pelicula[] = [];
 
