@@ -1,0 +1,23 @@
+<div class="container">
+    <app-pelicula-input 
+        class="contenedor-form"
+        (onEnter)="buscar($event)"
+        (onDebounce)="teclaPresionada($event)">
+    </app-pelicula-input>
+
+    <ul *ngIf="mostrarSugeridos" class="sugerencias">
+        <div *ngFor="let pelicula of peliculasSugeridas" class="sugerencias-div">
+            <img [src]="pelicula | imagenes:'search'" [alt]="pelicula.title">
+            <li 
+                (click)="buscarPelicula(pelicula.id)">
+                <a [routerLink]="['/pelicula', pelicula.id ]">{{pelicula.title}}</a>
+            </li>
+        </div>
+    </ul>
+</div>
+
+
+<app-pelicula-card
+    termino="Más populares"
+    [peliculas]="peliculas">
+</app-pelicula-card>

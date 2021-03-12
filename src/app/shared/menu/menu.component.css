@@ -1,0 +1,12 @@
+img {
+    height: 3rem;
+}
+
+input{
+    margin-right: 2rem;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+}

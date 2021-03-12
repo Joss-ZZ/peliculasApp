@@ -1,0 +1,23 @@
+
+
+<div *ngIf="pelicula" class="pelicula-principal" style="
+            background-image: linear-gradient(rgba(0, 0, 0, .5) 0%, rgba(0,0,0,.5) 100%), url({{ pelicula | imagenes:'portada' }});"> 
+    <div class="contenedor">
+        <div class="contenedor__pelicula">
+            <div class="poster">
+                <img [src]="pelicula | imagenes:'logo'">
+            </div>
+            <div class="pelicula-informacion">
+                <h2>{{pelicula.title}}</h2>
+                <p>{{pelicula.overview}}</p>
+                <button><i class="fas fa-play"></i>Ver pelicula</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ocupé utilizar el atributo style, debido a que no se puede poner una url dinámica en mi archivo css
+     utilicé la propiedad background-image para que al renderizar el HTML no reemplaza las propiedades
+    que estan en mi clase "pelicula-principal", si en caso le ponía solo "background" al ser una propiedad
+    grobal, esta reemplaza a todos los background de mi hoja de estilos -->

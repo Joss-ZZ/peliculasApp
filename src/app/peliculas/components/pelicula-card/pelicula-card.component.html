@@ -1,0 +1,13 @@
+<div class="contenedor">
+    <div class="contenido-principal">
+        <h2>{{termino}}</h2>
+        <div *ngFor="let pelicula of peliculas" class="card-pelicula">
+            <img [src]="pelicula | imagenes:'card'" [alt]="pelicula.title">
+            <div class="info-peli">
+                <h3>{{pelicula.title}}</h3>
+                <p>{{pelicula.overview.slice(0,50)+"..."}}</p>
+            </div>
+            <button type="button" [routerLink]="['/pelicula',pelicula.id]">Ver más</button>     
+        </div>
+    </div>
+</div>
